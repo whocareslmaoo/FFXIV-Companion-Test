@@ -1,17 +1,15 @@
+import 'sell_page/sells_page.dart';
+import 'splash/splash_file.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter_application_1/buy_page/buyitems_page.dart';
-import 'package:flutter_application_1/chat_page/chatPage.dart';
-import 'package:flutter_application_1/chat_page/friends_chat/falanor_chat.dart';
-import 'package:flutter_application_1/chat_page/friends_chat/unknow_chat.dart';
-import 'package:flutter_application_1/contacts_page/contact_page.dart';
-import 'package:flutter_application_1/event_page/events_page.dart';
-import 'package:flutter_application_1/items_page/item_page.dart';
-import 'package:flutter_application_1/sell_page/sells_page.dart';
-import 'package:flutter_application_1/splash/splash_file.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'buy_page/buyitems_page.dart';
+import 'chat_page/chatPage.dart';
+import 'chat_page/friends_chat/falanor_chat.dart';
 import 'chat_page/friends_chat/mika_chat.dart';
+import 'chat_page/friends_chat/unknow_chat.dart';
+import 'contacts_page/contact_page.dart';
+import 'event_page/events_page.dart';
+import 'items_page/item_page.dart';
 
 // usar auto sized text para ficar de acordo com a tela
 //animatedOpacity ou fadeInImage para transparecer os menus circulares

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/main.dart';
+
+import '../main.dart';
 
 class SplashFile extends StatefulWidget {
   const SplashFile({Key? key}) : super(key: key);
