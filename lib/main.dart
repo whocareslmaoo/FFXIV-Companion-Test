@@ -106,6 +106,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Stack(
+              //usar position
               alignment: Alignment.bottomCenter,
               children: [
                 Image.asset(
@@ -113,6 +114,43 @@ class _HomePageState extends State<HomePage> {
                   fit: BoxFit.cover,
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
+                ),
+                Positioned(
+                  top: 70,
+                  left: 20,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.transparent.withOpacity(0.6),
+                      borderRadius: BorderRadius.circular(25),
+                    ),
+                    width: 125,
+                    height: 25,
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 10),
+                        Icon(
+                          Icons.alarm_off_outlined,
+                          size: 16,
+                          color: const Color.fromARGB(132, 71, 67, 67)
+                              .withOpacity(0.9),
+                        ),
+                        const SizedBox(width: 10),
+                        const Text(
+                          'Bahamut',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 241, 237, 192),
+                            fontSize: 12,
+                          ),
+                        ),
+                        const SizedBox(width: 15),
+                        Icon(
+                          Icons.keyboard_arrow_up,
+                          color: const Color.fromARGB(0, 26, 84, 170)
+                              .withOpacity(0.7),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
                 Column(
                   children: [
