@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_application_1/buy_page/buyitems_page.dart';
 import 'package:flutter_application_1/chat_page/chatPage.dart';
 import 'package:flutter_application_1/chat_page/friends_chat/falanor_chat.dart';
@@ -8,6 +9,7 @@ import 'package:flutter_application_1/event_page/events_page.dart';
 import 'package:flutter_application_1/items_page/item_page.dart';
 import 'package:flutter_application_1/sell_page/sells_page.dart';
 import 'package:flutter_application_1/splash/splash_file.dart';
+
 import 'chat_page/friends_chat/mika_chat.dart';
 
 // usar auto sized text para ficar de acordo com a tela
@@ -65,11 +67,7 @@ class _HomePageState extends State<HomePage> {
                       child: IconButton(
                           icon: Image.asset("assets/images/yuukiface.jpg"),
                           iconSize: 100,
-                          onPressed: () {}
-
-                          // width: 200,
-                          // height: 200,
-                          ),
+                          onPressed: () {}),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -95,6 +93,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Stack(
+              alignment: Alignment.bottomCenter,
               children: [
                 Image.asset(
                   'assets/images/yuuki body.jpg',
@@ -102,137 +101,79 @@ class _HomePageState extends State<HomePage> {
                   height: MediaQuery.of(context).size.height,
                   width: MediaQuery.of(context).size.width,
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height,
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Wrap(
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height / 15),
-                            //const SizedBox(width: 15),
-                            RawMaterialButton(
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/chat-page');
-                              },
-                              elevation: 2.0,
-                              fillColor: Colors.grey.shade700,
-                              padding: const EdgeInsets.all(25.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.chat_sharp,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                            SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height / 40),
-                            //const SizedBox(width: 40),
-                            RawMaterialButton(
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/events-page');
-                              },
-                              elevation: 2.0,
-                              fillColor: Colors.grey.shade700,
-                              padding: const EdgeInsets.all(25.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.event_available,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                            SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height / 40),
-                            //const SizedBox(width: 40),
-                            RawMaterialButton(
-                              onPressed: () {
-                                Navigator.of(context)
-                                    .pushNamed('/contact-page');
-                              },
-                              // elevation: 2.0,
-                              fillColor: Colors.grey.shade700,
-                              padding: const EdgeInsets.all(25.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.contact_mail_sharp,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                          ],
+                Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        ButtonCircleIconHome(
+                          icon: Icons.chat,
+                          route: '/chat-page',
                         ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height / 130),
-                        //const SizedBox(height: 130),
-                        Row(
-                          children: [
-                            const SizedBox(width: 15),
-                            RawMaterialButton(
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/item-page');
-                              },
-                              elevation: 2.0,
-                              fillColor: Colors.grey.shade700,
-                              padding: const EdgeInsets.all(25.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.shopping_bag,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                            SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height / 40),
-                            //const SizedBox(width: 40),
-                            RawMaterialButton(
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/sell-page');
-                              },
-                              elevation: 2.0,
-                              fillColor: Colors.grey.shade700,
-                              padding: const EdgeInsets.all(25.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.sell,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                            SizedBox(
-                                height:
-                                    MediaQuery.of(context).size.height / 40),
-                            //const SizedBox(width: 40),
-                            RawMaterialButton(
-                              onPressed: () {
-                                Navigator.of(context).pushNamed('/buy-page');
-                              },
-                              elevation: 2.0,
-                              fillColor: Colors.grey.shade700,
-                              padding: const EdgeInsets.all(25.0),
-                              shape: const CircleBorder(),
-                              child: const Icon(
-                                Icons.shopping_cart,
-                                color: Colors.white,
-                                size: 50,
-                              ),
-                            ),
-                          ],
+                        ButtonCircleIconHome(
+                          icon: Icons.event_available,
+                          route: '/events-page',
+                        ),
+                        ButtonCircleIconHome(
+                          icon: Icons.contact_mail_sharp,
+                          route: '/contact-page',
                         ),
                       ],
                     ),
-                  ),
+                    const SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: const [
+                        ButtonCircleIconHome(
+                          icon: Icons.shopping_bag,
+                          route: '/item-page',
+                        ),
+                        ButtonCircleIconHome(
+                          icon: Icons.sell,
+                          route: '/sell-page',
+                        ),
+                        ButtonCircleIconHome(
+                          icon: Icons.shopping_cart,
+                          route: '/buy-page',
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 30),
+                  ],
                 ),
               ],
             ),
           ],
         ),
+      ),
+    );
+  }
+}
+
+class ButtonCircleIconHome extends StatelessWidget {
+  const ButtonCircleIconHome({
+    Key? key,
+    required this.route,
+    required this.icon,
+  }) : super(key: key);
+
+  final String route;
+  final IconData icon;
+
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      onPressed: () {
+        Navigator.of(context).pushNamed(route);
+      },
+      elevation: 2.0,
+      fillColor: Colors.transparent.withOpacity(0.3),
+      padding: const EdgeInsets.all(25.0),
+      shape: const CircleBorder(),
+      child: Icon(
+        icon,
+        color: Colors.white,
+        size: 50,
       ),
     );
   }
