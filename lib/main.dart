@@ -9,12 +9,14 @@ import 'package:flutter_application_1/event_page/events_page.dart';
 import 'package:flutter_application_1/items_page/item_page.dart';
 import 'package:flutter_application_1/sell_page/sells_page.dart';
 import 'package:flutter_application_1/splash/splash_file.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'chat_page/friends_chat/mika_chat.dart';
 
 // usar auto sized text para ficar de acordo com a tela
 //animatedOpacity ou fadeInImage para transparecer os menus circulares
 //senha android studio sora killby
+
 void main() {
   runApp(
     MaterialApp(
@@ -49,25 +51,24 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
+      extendBodyBehindAppBar: true,
+      endDrawer: Drawer(
         backgroundColor: const Color.fromARGB(255, 25, 25, 29),
         child: Column(
           children: [
             Container(
-              height: 150,
+              height: 75,
               width: 500,
-              decoration: const BoxDecoration(color: Colors.black54),
+              decoration:
+                  const BoxDecoration(color: Color.fromARGB(255, 0, 66, 209)),
               child: Row(
                 children: [
-                  //alignment: Alignment.centerLeft,
-                  CircleAvatar(
-                    radius: (26),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(60),
-                      child: IconButton(
-                          icon: Image.asset("assets/images/yuukiface.jpg"),
-                          iconSize: 100,
-                          onPressed: () {}),
+                  const SizedBox(width: 10),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(25),
+                    child: Image.asset(
+                      "assets/images/yuukiface.jpg",
+                      height: 45,
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -75,8 +76,18 @@ class _HomePageState extends State<HomePage> {
                     'Yuuki Miyashiya',
                     style: TextStyle(
                       color: (Colors.white),
-                      fontSize: 20,
+                      fontSize: 17,
                     ),
+                  ),
+                  const SizedBox(width: 60),
+                  IconButton(
+                    icon: const Icon(Icons.person_outline),
+                    iconSize: 24,
+                    color: Colors.white,
+                    onPressed: () async {
+                      await launchUrl(Uri.parse(
+                          'https://na.finalfantasyxiv.com/lodestone/account/login/'));
+                    },
                   ),
                 ],
               ),
@@ -86,7 +97,9 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: const Color.fromARGB(255, 10, 10, 10),
       appBar: AppBar(
-        title: const Text('Final Fantasy XIV Companion'),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: const Text('Yuuki Miyashiya'),
       ),
       body: SingleChildScrollView(
         child: Column(
