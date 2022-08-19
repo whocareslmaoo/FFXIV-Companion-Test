@@ -18,6 +18,7 @@ import 'items_page/item_page.dart';
 void main() {
   runApp(
     MaterialApp(
+      theme: ThemeData(fontFamily: 'Myriad'),
       title: 'Final Fantasy XIV Companion',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
@@ -55,7 +56,7 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: [
             Container(
-              height: 75,
+              height: 90,
               width: 500,
               decoration:
                   const BoxDecoration(color: Color.fromARGB(255, 0, 66, 209)),
@@ -75,12 +76,13 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                       color: (Colors.white),
                       fontSize: 17,
+                      fontFamily: 'Myriad',
                     ),
                   ),
                   const SizedBox(width: 60),
                   IconButton(
-                    icon: const Icon(Icons.person_outline),
-                    iconSize: 24,
+                    icon: const Icon(Icons.account_circle_outlined),
+                    iconSize: 27,
                     color: Colors.white,
                     onPressed: () async {
                       await launchUrl(Uri.parse(
@@ -217,12 +219,12 @@ class ButtonCircleIconHome extends StatelessWidget {
       },
       elevation: 2.0,
       fillColor: Colors.transparent.withOpacity(0.3),
-      padding: const EdgeInsets.all(25.0),
+      padding: const EdgeInsets.all(20.0),
       shape: const CircleBorder(),
       child: Icon(
         icon,
         color: Colors.white,
-        size: 50,
+        size: 40,
       ),
     );
   }
