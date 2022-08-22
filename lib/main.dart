@@ -1,7 +1,7 @@
+import 'drawer_homepage.dart';
 import 'sell_page/sells_page.dart';
 import 'splash/splash_file.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'buy_page/buyitems_page.dart';
 import 'chat_page/chatPage.dart';
 import 'chat_page/friends_chat/falanor_chat.dart';
@@ -51,50 +51,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBodyBehindAppBar: true,
-      endDrawer: Drawer(
-        backgroundColor: const Color.fromARGB(255, 25, 25, 29),
-        child: Column(
-          children: [
-            Container(
-              height: 90,
-              width: 500,
-              decoration:
-                  const BoxDecoration(color: Color.fromARGB(255, 0, 66, 209)),
-              child: Row(
-                children: [
-                  const SizedBox(width: 10),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(25),
-                    child: Image.asset(
-                      "assets/images/yuukiface.jpg",
-                      height: 45,
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  const Text(
-                    'Yuuki Miyashiya',
-                    style: TextStyle(
-                      color: (Colors.white),
-                      fontSize: 17,
-                      fontFamily: 'Myriad',
-                    ),
-                  ),
-                  const SizedBox(width: 60),
-                  IconButton(
-                    icon: const Icon(Icons.account_circle_outlined),
-                    iconSize: 27,
-                    color: Colors.white,
-                    onPressed: () async {
-                      await launchUrl(Uri.parse(
-                          'https://na.finalfantasyxiv.com/lodestone/account/login/'));
-                    },
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
+      endDrawer: const DrawerHomePage(),
       backgroundColor: const Color.fromARGB(255, 10, 10, 10),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
