@@ -84,10 +84,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Myriad
+    - family: FFXIV
       fonts:
-        - asset: fonts/MyriadProLight.otf
-  #       - asset: fonts/Schyler-Italic.ttf
+#        - asset: fonts/ffxiv.otf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

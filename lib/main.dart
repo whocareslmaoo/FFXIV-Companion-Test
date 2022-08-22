@@ -1,5 +1,6 @@
 import 'package:ffxiv_companion/login_page.dart';
 
+import 'button_circle_home.dart';
 import 'drawer_homepage.dart';
 import 'sell_page/sells_page.dart';
 import 'splash/splash_file.dart';
@@ -13,14 +14,10 @@ import 'contacts_page/contact_page.dart';
 import 'event_page/events_page.dart';
 import 'items_page/item_page.dart';
 
-// usar auto sized text para ficar de acordo com a tela
-//animatedOpacity ou fadeInImage para transparecer os menus circulares
-//senha android studio sora killby
-
 void main() {
   runApp(
     MaterialApp(
-      theme: ThemeData(fontFamily: 'Myriad'),
+      theme: ThemeData(fontFamily: 'FFXIV'),
       title: 'Final Fantasy XIV Companion',
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
@@ -156,35 +153,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class ButtonCircleIconHome extends StatelessWidget {
-  const ButtonCircleIconHome({
-    Key? key,
-    required this.route,
-    required this.icon,
-  }) : super(key: key);
-
-  final String route;
-  final IconData icon;
-
-  @override
-  Widget build(BuildContext context) {
-    return RawMaterialButton(
-      onPressed: () {
-        Navigator.of(context).pushNamed(route);
-      },
-      elevation: 2.0,
-      fillColor: Colors.transparent.withOpacity(0.3),
-      padding: const EdgeInsets.all(20.0),
-      shape: const CircleBorder(),
-      child: Icon(
-        icon,
-        color: Colors.white,
-        size: 40,
       ),
     );
   }

@@ -35,7 +35,6 @@ class DrawerHomePage extends StatelessWidget {
                     style: TextStyle(
                       color: (Colors.white),
                       fontSize: 17,
-                      fontFamily: 'Myriad',
                     ),
                   ),
                   const SizedBox(width: 60),
@@ -133,7 +132,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
@@ -155,7 +154,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
@@ -181,12 +180,12 @@ class DrawerHomePage extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               children: [
                 const Divider(
-                  height: 7,
-                  thickness: 30,
+                  height: 2,
+                  thickness: 27,
                   color: Color.fromARGB(255, 36, 35, 35),
                 ),
                 Text(
-                  'FINAL FANTASY XIV',
+                  '     FINAL FANTASY XIV',
                   style: TextStyle(
                     color: Colors.grey.shade400,
                   ),
@@ -211,7 +210,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
@@ -233,7 +232,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
@@ -259,12 +258,12 @@ class DrawerHomePage extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               children: [
                 const Divider(
-                  height: 7,
-                  thickness: 30,
+                  height: 2,
+                  thickness: 27,
                   color: Color.fromARGB(255, 36, 35, 35),
                 ),
                 Text(
-                  'Help',
+                  '   Help',
                   style: TextStyle(
                     color: Colors.grey.shade400,
                   ),
@@ -289,7 +288,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
@@ -311,7 +310,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
@@ -333,7 +332,7 @@ class DrawerHomePage extends StatelessWidget {
               ),
             ),
             const Divider(
-              height: 7,
+              height: 2,
               endIndent: 150,
               color: Colors.grey,
             ),
