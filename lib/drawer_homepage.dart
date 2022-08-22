@@ -62,7 +62,25 @@ class DrawerHomePage extends StatelessWidget {
               child: Row(
                 children: const [
                   SizedBox(width: 12),
-                  Icon(Icons.cookie_outlined)
+                  Icon(Icons.cookie_outlined),
+                  SizedBox(width: 160),
+                  Text(
+                    '2',
+                    style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.purple,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Text(
+                    '/2',
+                    style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -75,9 +93,25 @@ class DrawerHomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(4),
               ),
               child: Row(
-                children: const [
-                  SizedBox(width: 12),
-                  Icon(Icons.apple_outlined)
+                children: [
+                  const SizedBox(width: 12),
+                  const Icon(Icons.apple_outlined),
+                  const SizedBox(width: 160),
+                  const Text(
+                    '0',
+                    style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.yellow,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.add_box,
+                      size: 30,
+                    ),
+                  )
                 ],
               ),
             ),
@@ -320,6 +354,7 @@ class DrawerHomePage extends StatelessWidget {
                 size: 26,
               ),
             ),
+            const SizedBox(height: 50),
           ],
         ),
       ),
