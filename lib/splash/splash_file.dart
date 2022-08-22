@@ -1,6 +1,5 @@
+import 'package:ffxiv_companion/login_page.dart';
 import 'package:flutter/material.dart';
-
-import '../main.dart';
 
 class SplashFile extends StatefulWidget {
   const SplashFile({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class _SplashFileState extends State<SplashFile> {
   void initState() {
     Future.delayed(const Duration(seconds: 5)).then((value) {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const HomePage()),
+        MaterialPageRoute(builder: (context) => const LoginPage()),
       );
     });
     super.initState();

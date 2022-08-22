@@ -1,3 +1,5 @@
+import 'package:ffxiv_companion/login_page.dart';
+
 import 'drawer_homepage.dart';
 import 'sell_page/sells_page.dart';
 import 'splash/splash_file.dart';
@@ -24,6 +26,7 @@ void main() {
       initialRoute: '/',
       routes: {
         '/': (context) => const SplashFile(),
+        '/login-page': (context) => const LoginPage(),
         '/home-page': (context) => const HomePage(),
         '/events-page': (context) => const EventsPage(),
         '/item-page': (context) => const ItemPage(),
